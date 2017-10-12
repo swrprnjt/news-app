@@ -1,0 +1,9 @@
+.list-group-item {
+  border: none;
+}
+
+@media screen and (max-width: 792px) {
+  .list-group-item {
+    padding: 0;
+  }
+}

@@ -1,0 +1,9 @@
+<h3>Favourite Vendors</h3>
+<div class="list-group">
+  <li *ngFor="let item of favourites" class="list-group-item">
+    <p>{{ item | asTitle }}</p>
+    <button type="button" class="btn btn-outline-info btn-sm" [class.disabled]="item === vendor" [disabled]="item === vendor"
+      (click)="setVendor(item)">View</button>
+    <button type="button" class="btn btn-outline-success btn-sm" (click)="removeFavourite(item)">Remove</button>
+  </li>
+</div>

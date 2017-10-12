@@ -1,0 +1,10 @@
+<h1 *ngIf="vendor">{{ vendor | asTitle }}</h1>
+<hr>
+<ul class="list-group">
+  <li *ngFor="let item of vendors" [value]="item" class="list-group-item">
+    <p>{{ item | asTitle }}</p>
+    <button type="button" class="btn btn-outline-info btn-sm" [class.disabled]="item === vendor" [disabled]="item === vendor"
+      (click)="setVendor(item)">View</button>
+    <button type="button" class="btn btn-outline-success btn-sm" (click)="setFavourite(item)">Favourite</button>
+  </li>
+</ul>

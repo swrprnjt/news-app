@@ -1,0 +1,32 @@
+<div class="app bg-light">
+  <header>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#" data-e2e="app-title">News App</a>
+    </nav>
+  </header>
+  <div class="app-main container-fluid ">
+    <div class="row">
+      <div *ngIf="showFullVendorList" class="col-lg-3 col-md-9 col-sm-12">
+        <app-vendor-select></app-vendor-select>
+      </div>
+      <div [class.col-lg-6]="showFullVendorList" [class.col-lg-9]="!showFullVendorList" class="col-sm-12 col-md-9">
+        <router-outlet></router-outlet>
+      </div>
+      <div class="col-lg-3 col-md-9 col-sm-12">
+        <button (click)="toggleShow()" *ngIf="!showFullVendorList" type="button" class="btn btn-info btn-lg btn-block">Show Full Vendor List</button>
+        <button (click)="toggleShow()" *ngIf="showFullVendorList" type="button" class="btn btn-secondary btn-lg btn-block">Hide Full Vendor List</button>
+        <hr>
+        <app-favourite-vendors></app-favourite-vendors>
+      </div>
+    </div>
+  </div>
+  <footer class="footer bg-dark">
+    <div class="footer-inner  container-fluid">
+      <p class="text-muted">© BrianDGLS 2017</p>
+      <p class="text-muted">This app uses data from
+        <a href="https://newsapi.org/" rel="noopener noreffer" target="_blank">https://newsapi.org/</a>
+      </p>
+    </div>
+  </footer>
+  <button class="back-to-top btn btn-lg" *ngIf="showBackToTop" (click)="scrollTop()">Back To Top</button>
+</div>

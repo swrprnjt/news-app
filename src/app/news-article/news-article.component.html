@@ -1,0 +1,8 @@
+<div class="card">
+  <h4 class="card-header">{{ article.title }}</h4>
+  <div class="card-body">
+    <img [src]="article.urlToImage | sanitizeUrl" class="img-thumbnail" [alt]="article.title">
+    <p class="card-text" *ngIf="article.description">{{article.description}}</p>
+    <a [href]="article.url | sanitizeUrl" rel="noreferrer noopener" target="_blank" class="btn btn-info">View Article</a>
+  </div>
+</div>

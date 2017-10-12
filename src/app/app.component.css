@@ -1,0 +1,18 @@
+.footer {
+  padding: 3rem 0 2rem;
+}
+
+.app-main .col {
+  padding-bottom: 4rem;
+}
+
+.btn-block {
+  margin: 1rem 0;
+}
+
+.back-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  cursor: pointer;
+}
